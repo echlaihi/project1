@@ -1,0 +1,34 @@
+#section-2 {
+    width: 100%;
+    min-height: 100vh;
+    background-color: $secondary_waite;
+    font-family: 'AcuminPro', sans-serif;
+    .wrapper {
+        height: 100%;
+        margin-top: 0;
+    }
+    h1 {
+        padding: (100rem/16) .3rem (55rem/16) .3rem;
+        font-size: 3rem;
+        font-family: 'ACaslonPro';
+        font-weight: bold;
+        font-style: italic;
+        color: $dark_gray;
+        line-height: 3.4rem;
+        span {
+            color: $light_green;
+        }
+    }
+    blockquote {
+        // @extend %border;
+        line-height: 1.8rem;
+        color: $middle_gray;
+    }
+    #quote-1 {
+        margin-bottom: 1.7rem;
+    }
+    p {
+        color: $light_gray;
+        margin: 3rem .5rem;
+    }
+}

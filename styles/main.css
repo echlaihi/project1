@@ -142,10 +142,6 @@ table {
   border-spacing: 0;
 }
 
-.wrapper, .logo {
-  border: 1px solid red;
-}
-
 header #search label {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -161,9 +157,10 @@ body {
 }
 
 .wrapper {
-  width: 100vw;
+  width: 96vw;
   max-width: 68.75rem;
   margin: 0 auto;
+  padding: 0 1.5vw;
 }
 
 .logo {
@@ -244,5 +241,45 @@ header #search label i {
 header #search input {
   padding: .5rem !important;
   margin-top: 2rem;
+}
+
+#section-2 {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #f0f0f4;
+  font-family: 'AcuminPro', sans-serif;
+}
+
+#section-2 .wrapper {
+  height: 100%;
+  margin-top: 0;
+}
+
+#section-2 h1 {
+  padding: 6.25rem 0.3rem 3.4375rem 0.3rem;
+  font-size: 3rem;
+  font-family: 'ACaslonPro';
+  font-weight: bold;
+  font-style: italic;
+  color: #5f5f80;
+  line-height: 3.4rem;
+}
+
+#section-2 h1 span {
+  color: #00ff9c;
+}
+
+#section-2 blockquote {
+  line-height: 1.8rem;
+  color: #4c4c6d;
+}
+
+#section-2 #quote-1 {
+  margin-bottom: 1.7rem;
+}
+
+#section-2 p {
+  color: #aaaac0;
+  margin: 3rem .5rem;
 }
 /*# sourceMappingURL=main.css.map */

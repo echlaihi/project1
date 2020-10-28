@@ -4,17 +4,18 @@ body {
 }
 
 .wrapper {
-    width: 100vw;
+    width: 96vw;
     max-width: (1100rem/16);
     margin: 0 auto;
-    @extend %border;
+    padding: 0 1.5vw;
+    // @extend %border;
 }
 
 .logo {
     min-width: 5rem;
     height: 5rem;
     background: url('../../img/logo.png') center no-repeat;
-    @extend %border;
+    // @extend %border;
     align-self: center;
     margin: 0 (58rem/16);
 }
