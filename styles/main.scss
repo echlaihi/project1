@@ -1,0 +1,15 @@
+// this is where all the sass files are imported to compiled
+// the css rest 
+@import 'scss/_css_reset.scss';
+// the variables file the includes text colors and background color
+@import 'scss/_variables.scss';
+// the mixins file includes media queries
+@import 'scss/_mixins.scss';
+// the helpers file includes extra code which is repreated
+@import 'scss/_helpers.scss';
+// import the main layout
+@import 'scss/_basis.scss';
+// import section1 style
+@import 'scss/_section1.scss';
+// import section2.scss
+@import 'scss/_section2.scss';

@@ -1,0 +1,55 @@
+#section-1 {
+    height: 100vh;
+    background: url('../../img/building.jpg') top no-repeat;
+    // background-position:;
+}
+
+header {
+    height: (58rem/8);
+    display: flex;
+    font-family: sans-serif;
+    nav {
+        display: flex;
+        transform: skewX(-9.2deg);
+    }
+    ul {
+        display: flex;
+        width: 100%;
+        a {
+            display: block;
+            padding-top: (42rem/16);
+            padding-bottom: 1rem;
+            padding: (42rem/16) (23rem/16) 1rem (23rem/16);
+            color: $primary_waite;
+            font-style: italic;
+            text-transform: uppercase;
+            letter-spacing: .05rem;
+            &.active {
+                background-color: $light_green;
+                color: $dark;
+            }
+        }
+    }
+    #search {
+        width: 20%;
+        margin-left: 1rem;
+        form {
+            width: 100%;
+            height: 100%;
+        }
+        label {
+            width: 5rem;
+            height: 5rem;
+            height: 2rem;
+            @extend %align-center;
+            display: none;
+            i {
+                font-size: 2rem;
+            }
+        }
+        input {
+            padding: .5rem !important;
+            margin-top: 2rem;
+        }
+    }
+}
