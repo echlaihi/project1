@@ -363,4 +363,131 @@ header #search input {
 #section-3 a:nth-child(2):hover {
   background-color: #e8e8e8;
 }
+
+#section-4 {
+  font-family: 'ACaslonPro';
+  background-color: #fff;
+}
+
+#section-4 .wrapper {
+  position: relative;
+}
+
+#section-4 #section-4-heading {
+  margin: 3.25rem auto;
+}
+
+#section-4 #section-4-heading h2 {
+  margin: 2rem auto;
+  text-align: center;
+  font-weight: bold;
+  color: #1d1e38;
+  font-style: italic;
+  font-size: 2rem;
+}
+
+#section-4 #section-4-heading p {
+  line-height: 1.7rem;
+  font-family: 'AcuminPro', sans-serif;
+  color: #373757;
+}
+
+#section-4 .courosel-container {
+  position: relative;
+  width: 100%;
+  height: 29.625rem;
+  overflow-x: scroll;
+}
+
+#section-4 .courosel-container .courosel-wrapper {
+  position: relative;
+  width: 400%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#section-4 .courosel-container .courosel-item {
+  width: 100%;
+  height: 100%;
+}
+
+#section-4 .courosel-container .courosel-item:nth-of-type(1) {
+  background: url("../../img/innerHouse.jpg") center no-repeat;
+  background-size: cover;
+}
+
+#section-4 .courosel-container .courosel-item:nth-of-type(2) {
+  background: green;
+  background-size: cover;
+}
+
+#section-4 .courosel-container .courosel-item:nth-of-type(2) {
+  background: green;
+  background: url("../../img/innerHouse.jpg") center no-repeat;
+  background-size: cover;
+}
+
+#section-4 button {
+  position: absolute;
+  width: 3.375rem;
+  height: 6.25rem;
+  top: 57%;
+  -webkit-transform: translateX(-1.5rem);
+          transform: translateX(-1.5rem);
+  background-color: #00ff9c;
+  border: none;
+  z-index: 1;
+}
+
+#section-4 button:last-child {
+  right: -2rem;
+}
+
+#section-4 button:last-child div {
+  border-top: 0.2rem solid #fff;
+  border-right: 0.2rem solid #fff;
+}
+
+#section-4 button div {
+  width: 1rem;
+  height: 1rem;
+  margin: auto;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#section-4 #left div {
+  border-left: 0.2rem solid #fff;
+  border-bottom: 0.2rem solid #fff;
+}
+
+#section-4 .wrapper-2 {
+  margin-top: 1.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#section-4 .wrapper-2 img {
+  width: 37%;
+}
+
+#section-4 .wrapper-2 .text {
+  padding: 1%;
+  width: 57%;
+}
+
+#section-4 .wrapper-2 p {
+  line-height: 1.7rem;
+  font-size: 1.2rem;
+  color: #3c3c5d;
+}
 /*# sourceMappingURL=main.css.map */

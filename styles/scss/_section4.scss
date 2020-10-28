@@ -1,0 +1,100 @@
+#section-4 {
+    font-family: 'ACaslonPro';
+    background-color: $primary_waite;
+    .wrapper {
+        position: relative;
+    }
+    #section-4-heading {
+        margin: (52rem/16) auto;
+        h2 {
+            margin: 2rem auto;
+            text-align: center;
+            font-weight: bold;
+            color: $primary_dark;
+            font-style: italic;
+            font-size: 2rem;
+        }
+        p {
+            line-height: 1.7rem;
+            font-family: 'AcuminPro', sans-serif;
+            color: $secondary_dark;
+        }
+    }
+    // courosel container
+    .courosel-container {
+        position: relative;
+        width: 100%;
+        height: (474rem/16);
+        overflow-x: scroll;
+        .courosel-wrapper {
+            position: relative;
+            width: 400%;
+            height: 100%;
+            display: flex;
+        }
+        .courosel-item {
+            width: 100%;
+            height: 100%;
+            &:nth-of-type(1) {
+                background: url('../../img/innerHouse.jpg') center no-repeat;
+                background-size: cover;
+            }
+            &:nth-of-type(2) {
+                background: green;
+                background-size: cover;
+            }
+            &:nth-of-type(2) {
+                background: green;
+                background: url('../../img/innerHouse.jpg') center no-repeat;
+                background-size: cover;
+            }
+        }
+    }
+    button {
+        position: absolute;
+        width: (54rem/16);
+        height: (100rem/16);
+        top: 57%;
+        transform: translateX(-1.5rem);
+        background-color: $light_green;
+        border: none;
+        z-index: 1;
+        &:last-child {
+            right: -2rem;
+            div {
+                border-top: .2rem solid $primary_waite;
+                border-right: .2rem solid $primary_waite;
+            }
+        }
+        div {
+            width: 1rem;
+            height: 1rem;
+            margin: auto;
+            transform: rotate(45deg);
+            justify-content: center;
+        }
+    }
+    #left {
+        div {
+            border-left: .2rem solid $primary_waite;
+            border-bottom: .2rem solid $primary_waite;
+        }
+    }
+    .wrapper-2 {
+        margin-top: 1.5rem;
+        display: flex;
+        justify-content: space-between;
+        img {
+            width: 37%;
+        }
+        .text {
+            padding: 1%;
+            width: 57%;
+        }
+        p {
+            line-height: 1.7rem;
+            font-size: 1.2rem;
+            color: $section-4-dark;
+        }
+    }
+}
