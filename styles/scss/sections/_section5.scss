@@ -1,0 +1,24 @@
+#section-5 {
+    background-color: $light_green;
+    .wrapper {
+        @extend %align-center;
+        justify-content: space-between;
+        // add flex wrap here in response 
+        min-height: (140rem/16);
+        font-family: 'ACaslonPro';
+        font-style: italic;
+        font-weight: bolder;
+        font-size: 1.4rem;
+        color: $dark_blue;
+        a {
+            font-weight: bold;
+            padding: 1rem 2.7rem;
+            background-color: $primary_waite;
+            border-radius: .3rem;
+            transition: background-color .2s ease;
+            &:hover {
+                background-color: darken($color: $primary_waite, $amount: 20);
+            }
+        }
+    }
+}

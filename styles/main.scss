@@ -10,10 +10,16 @@
 // import the main layout
 @import 'scss/_basis.scss';
 // import section1 style
-@import 'scss/_section1.scss';
+@import 'scss/sections/_section1.scss';
 // import section2.scss
-@import 'scss/_section2.scss';
+@import 'scss/sections/_section2.scss';
 // import section3.scss
-@import 'scss/_section3.scss';
+@import 'scss/sections/_section3.scss';
 // import section4.scss
-@import 'scss/_section4.scss';
+@import 'scss/sections/_section4.scss';
+// import section5.scss
+@import 'scss/sections/_section5.scss';
+// import section6.scss
+@import 'scss/sections/_section6.scss';
+// import footer.scss
+@import 'scss/sections/_footer.scss';

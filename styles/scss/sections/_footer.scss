@@ -1,0 +1,11 @@
+footer {
+    background-color: $dark_blue_footer;
+    .wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: (159rem/16);
+        color: $gray;
+        font-family: 'AcuminPro', sans-serif;
+    }
+}

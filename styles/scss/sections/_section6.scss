@@ -1,0 +1,37 @@
+#section-6 {
+    font-family: 'AcuminPro', sans-serif;
+    min-height: (500rem/16);
+    background-color: $dark_blue;
+    .wrapper {
+        min-height: inherit;
+        display: flex;
+        flex-direction: column;
+        padding: 4rem 0 !important;
+        .logo {
+            margin: 2rem auto;
+        }
+        .boxes {
+            display: flex;
+            width: 100%;
+            justify-content: space-evenly;
+            min-height: (201rem/16);
+            // flex wrap here
+            .box {
+                line-height: 2.3rem;
+                text-align: center;
+                font-size: 1.2rem;
+                h4 {
+                    text-transform: uppercase;
+                    color: $light_green;
+                }
+                ul {
+                    display: flex;
+                    flex-direction: column;
+                }
+                a {
+                    color: $gray;
+                }
+            }
+        }
+    }
+}
