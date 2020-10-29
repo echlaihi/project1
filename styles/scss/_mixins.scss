@@ -1,5 +1,5 @@
-@mixin table {
-    @media screen and(max-width: ) {
+@mixin tablet {
+    @media screen and(max-width: 1082px) {
         @content;
     }
 }
@@ -7,5 +7,28 @@
 @mixin mobile {
     @media screen and (max-width: ) {
         @content;
+    }
+}
+
+// animations
+@mixin rotationRight {
+    @keyframes rotationRight {
+        0% {
+            transform: rotate(0deg);
+        }
+        100% {
+            transform: rotate(45deg);
+        }
+    }
+}
+
+@mixin rotationLeft {
+    @keyframes rotationLeft {
+        0% {
+            transform: rotate(0deg);
+        }
+        100% {
+            transform: rotate(-45deg);
+        }
     }
 }

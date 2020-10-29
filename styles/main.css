@@ -154,6 +154,7 @@ header #search label, #section-5 .wrapper {
 html,
 body {
   width: 100%;
+  overflow-x: hidden;
 }
 
 .wrapper {
@@ -214,6 +215,8 @@ header ul a {
   font-style: italic;
   text-transform: uppercase;
   letter-spacing: .05rem;
+  -webkit-transition: background-color .2s ease;
+  transition: background-color .2s ease;
 }
 
 header ul a.active {
@@ -221,7 +224,13 @@ header ul a.active {
   color: #31271c;
 }
 
+header ul a:hover {
+  background-color: #00ff9c;
+}
+
 header #search {
+  -ms-flex-negative: 2;
+      flex-shrink: 2;
   width: 20%;
   margin-left: 1rem;
 }
@@ -245,6 +254,141 @@ header #search label i {
 header #search input {
   padding: .5rem !important;
   margin-top: 2rem;
+}
+
+@media screen and (max-width: 1082px) {
+  header {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    min-height: 5rem;
+  }
+  header #burgger-toggler {
+    -ms-flex-item-align: center;
+        align-self: center;
+    width: 2rem;
+    height: 2rem;
+    border: 1px solid red;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  header #burgger-toggler .line {
+    width: 2rem;
+    height: .3rem;
+    background-color: #fff;
+    border-radius: 20%;
+    -webkit-transition: -webkit-transform .3s ease;
+    transition: -webkit-transform .3s ease;
+    transition: transform .3s ease;
+    transition: transform .3s ease, -webkit-transform .3s ease;
+  }
+  header #burgger-toggler #line1 {
+    background: #eba50e;
+  }
+  header #burgger-toggler #line2 {
+    -webkit-transform: translateY(0.45rem);
+            transform: translateY(0.45rem);
+  }
+  header #burgger-toggler #line3 {
+    background: green;
+    -webkit-transform: translateY(1rem);
+            transform: translateY(1rem);
+  }
+  header #burgger-toggler.active #line2 {
+    opacity: 0;
+  }
+  header #burgger-toggler.active #line3 {
+    -webkit-transform: translateY(0.27rem);
+            transform: translateY(0.27rem);
+  }
+  @-webkit-keyframes rotationRight {
+    0% {
+      -webkit-transform: rotate(0deg);
+              transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(45deg);
+              transform: rotate(45deg);
+    }
+  }
+  @keyframes rotationRight {
+    0% {
+      -webkit-transform: rotate(0deg);
+              transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(45deg);
+              transform: rotate(45deg);
+    }
+  }
+  @-webkit-keyframes rotationLeft {
+    0% {
+      -webkit-transform: rotate(0deg);
+              transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(-45deg);
+              transform: rotate(-45deg);
+    }
+  }
+  @keyframes rotationLeft {
+    0% {
+      -webkit-transform: rotate(0deg);
+              transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(-45deg);
+              transform: rotate(-45deg);
+    }
+  }
+  header nav {
+    -webkit-transform: skewX(0);
+            transform: skewX(0);
+    position: fixed;
+    left: 0;
+    top: 7rem;
+    background-color: #aaaac0;
+    width: 70%;
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+    -webkit-transition: -webkit-transform .2s ease;
+    transition: -webkit-transform .2s ease;
+    transition: transform .2s ease;
+    transition: transform .2s ease, -webkit-transform .2s ease;
+  }
+  header nav ul {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  header nav a {
+    padding: 1.5rem 5rem;
+  }
+  header nav.active {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+  }
+  header #search {
+    position: relative;
+    right: 0;
+    margin-left: 0;
+    width: 10rem;
+    margin-top: .4rem;
+  }
+  header #search input {
+    width: 100%;
+  }
+  header .logo {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
 }
 
 #section-2 {

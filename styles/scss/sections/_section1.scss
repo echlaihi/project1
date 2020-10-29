@@ -24,13 +24,18 @@ header {
             font-style: italic;
             text-transform: uppercase;
             letter-spacing: .05rem;
+            transition: background-color .2s ease;
             &.active {
                 background-color: $light_green;
                 color: $dark;
             }
+            &:hover {
+                background-color: $light-green;
+            }
         }
     }
     #search {
+        flex-shrink: 2;
         width: 20%;
         margin-left: 1rem;
         form {
@@ -50,6 +55,92 @@ header {
         input {
             padding: .5rem !important;
             margin-top: 2rem;
+        }
+    }
+    @include tablet {
+        justify-content: space-between;
+        min-height: 5rem;
+        #burgger-toggler {
+            align-self: center;
+            width: 2rem;
+            height: 2rem;
+            border: 1px solid red;
+            display: flex;
+            flex-direction: column;
+            // transform: translate(.5rem, 1rem);
+            .line {
+                width: 2rem;
+                height: .3rem;
+                background-color: $primary_waite;
+                border-radius: 20%;
+                transition: transform .3s ease;
+            }
+            #line1 {
+                background: rgb(235, 165, 14);
+            }
+            #line2 {
+                transform: translateY(.45rem);
+            }
+            #line3 {
+                background: green;
+                transform: translateY(1rem);
+            }
+            &.active {
+                #line1 {
+                    // display: none;
+                    // transform: translateY(0rem);
+                    // animation: rotationRight 2s ease forwards .4s;
+                }
+                #line2 {
+                    // animation: rotationLeft .3s ease forwards .4s;
+                    opacity: 0;
+                }
+                #line3 {
+                    // display: none;
+                    transform: translateY(.27rem);
+                    // transform: translateY((-1.5rem/2));
+                    // animation: rotationLeft 2s ease forwards .4s;
+                }
+                @include rotationRight;
+                @include rotationLeft;
+            }
+        }
+        nav {
+            transform: skewX(0);
+            position: fixed;
+            left: 0;
+            top: 7rem;
+            background-color: $light_gray;
+            width: 70%;
+            transform: scaleX(0);
+            transition: transform .2s ease;
+            ul {
+                flex-direction: column;
+            }
+            li {
+                // padding:
+            }
+            a {
+                padding: 1.5rem 5rem;
+            }
+            // display: none;
+            &.active {
+                transform: scaleX(1);
+            }
+        }
+        #search {
+            position: relative;
+            right: 0;
+            margin-left: 0;
+            width: 10rem;
+            margin-top: .4rem;
+            input {
+                width: 100%;
+            }
+        }
+        .logo {
+            align-self: center;
+            // 
         }
     }
 }
