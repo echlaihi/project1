@@ -9,8 +9,10 @@ footer {
         color: $gray;
         font-family: 'AcuminPro', sans-serif;
         @include mobile {
-            height: (80rem/16);
+            height: (100rem/16);
             justify-content: center;
+            line-height: 1.5rem;
+            text-align: center;
             .logo {
                 display: none;
             }
