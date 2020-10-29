@@ -2,10 +2,18 @@ footer {
     background-color: $dark_blue_footer;
     .wrapper {
         display: flex;
+        flex-wrap: wrap;
         justify-content: space-between;
         align-items: center;
         height: (159rem/16);
         color: $gray;
         font-family: 'AcuminPro', sans-serif;
+        @include mobile {
+            height: (80rem/16);
+            justify-content: center;
+            .logo {
+                display: none;
+            }
+        }
     }
 }

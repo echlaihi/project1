@@ -766,6 +766,8 @@ footer .wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -775,5 +777,17 @@ footer .wrapper {
   height: 9.9375rem;
   color: #353555;
   font-family: 'AcuminPro', sans-serif;
+}
+
+@media screen and (max-width: 728px) {
+  footer .wrapper {
+    height: 5rem;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  footer .wrapper .logo {
+    display: none;
+  }
 }
 /*# sourceMappingURL=main.css.map */
