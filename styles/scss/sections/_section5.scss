@@ -3,13 +3,14 @@
     .wrapper {
         @extend %align-center;
         justify-content: space-between;
-        // add flex wrap here in response 
+        flex-wrap: wrap;
         min-height: (140rem/16);
         font-family: 'ACaslonPro';
         font-style: italic;
         font-weight: bolder;
         font-size: 1.4rem;
         color: $dark_blue;
+        @extend %border;
         a {
             font-weight: bold;
             padding: 1rem 2.7rem;
@@ -18,6 +19,14 @@
             transition: background-color .2s ease;
             &:hover {
                 background-color: darken($color: $primary_waite, $amount: 20);
+            }
+        }
+        @include mobile {
+            justify-content: center;
+            padding-top: 2.2rem;
+            padding-bottom: 2.2rem;
+            a {
+                margin: 1rem auto;
             }
         }
     }

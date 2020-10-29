@@ -142,6 +142,10 @@ table {
   border-spacing: 0;
 }
 
+#section-5 .wrapper {
+  border: 1px solid red;
+}
+
 header #search label, #section-5 .wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -643,6 +647,8 @@ header #search input {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   min-height: 8.75rem;
   font-family: 'ACaslonPro';
   font-style: italic;
@@ -662,6 +668,19 @@ header #search input {
 
 #section-5 .wrapper a:hover {
   background-color: #cccccc;
+}
+
+@media screen and (max-width: 728px) {
+  #section-5 .wrapper {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding-top: 2.2rem;
+    padding-bottom: 2.2rem;
+  }
+  #section-5 .wrapper a {
+    margin: 1rem auto;
+  }
 }
 
 #section-6 {
