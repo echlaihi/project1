@@ -6,6 +6,7 @@
     .wrapper {
         height: 100%;
         margin-top: 0;
+        padding-bottom: 3rem;
     }
     h1 {
         padding: (100rem/16) .3rem (55rem/16) .3rem;
@@ -15,6 +16,11 @@
         font-style: italic;
         color: $dark_gray;
         line-height: 3.4rem;
+        @include extra-mobile {
+            font-size: 2rem;
+            padding: (70rem/16) .3rem (30rem/16) .3rem;
+            line-height: 3rem;
+        }
         span {
             color: $light_green;
         }

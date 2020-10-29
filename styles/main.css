@@ -401,6 +401,7 @@ header #search input {
 #section-2 .wrapper {
   height: 100%;
   margin-top: 0;
+  padding-bottom: 3rem;
 }
 
 #section-2 h1 {
@@ -411,6 +412,14 @@ header #search input {
   font-style: italic;
   color: #5f5f80;
   line-height: 3.4rem;
+}
+
+@media screen and (max-width: 540px) {
+  #section-2 h1 {
+    font-size: 2rem;
+    padding: 4.375rem 0.3rem 1.875rem 0.3rem;
+    line-height: 3rem;
+  }
 }
 
 #section-2 h1 span {
