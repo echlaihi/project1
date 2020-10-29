@@ -12,14 +12,28 @@
         }
         .boxes {
             display: flex;
+            flex-wrap: wrap;
             width: 100%;
             justify-content: space-evenly;
             min-height: (201rem/16);
-            // flex wrap here
             .box {
+                width: 33%;
                 line-height: 2.3rem;
                 text-align: center;
                 font-size: 1.2rem;
+                @include mobile {
+                    &#box-3 {
+                        margin-top: 2rem;
+                    }
+                    width: 50%;
+                }
+                @include extra-mobile {
+                    width: 80%;
+                    &#box-1,
+                    &#box-2 {
+                        margin-top: 2rem;
+                    }
+                }
                 h4 {
                     text-transform: uppercase;
                     color: $light_green;

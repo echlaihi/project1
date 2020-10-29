@@ -142,10 +142,6 @@ table {
   border-spacing: 0;
 }
 
-#section-5 .wrapper {
-  border: 1px solid red;
-}
-
 header #search label, #section-5 .wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -709,6 +705,8 @@ header #search input {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   width: 100%;
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
@@ -717,9 +715,28 @@ header #search input {
 }
 
 #section-6 .wrapper .boxes .box {
+  width: 33%;
   line-height: 2.3rem;
   text-align: center;
   font-size: 1.2rem;
+}
+
+@media screen and (max-width: 728px) {
+  #section-6 .wrapper .boxes .box {
+    width: 50%;
+  }
+  #section-6 .wrapper .boxes .box#box-3 {
+    margin-top: 2rem;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  #section-6 .wrapper .boxes .box {
+    width: 80%;
+  }
+  #section-6 .wrapper .boxes .box#box-1, #section-6 .wrapper .boxes .box#box-2 {
+    margin-top: 2rem;
+  }
 }
 
 #section-6 .wrapper .boxes .box h4 {
