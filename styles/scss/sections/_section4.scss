@@ -36,7 +36,7 @@
             width: 100%;
             height: 100%;
             &:nth-of-type(1) {
-                background: url('../../img/innerHouse.jpg') center no-repeat;
+                background: url('../img/innerHouse.jpg') center no-repeat;
                 background-size: cover;
             }
             &:nth-of-type(2) {
@@ -45,7 +45,7 @@
             }
             &:nth-of-type(2) {
                 background: green;
-                background: url('../../img/innerHouse.jpg') center no-repeat;
+                background: url('../img/innerHouse.jpg') center no-repeat;
                 background-size: cover;
             }
         }

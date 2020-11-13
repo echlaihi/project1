@@ -154,7 +154,6 @@ header #search label, #section-5 .wrapper {
 html,
 body {
   width: 100%;
-  overflow-x: hidden;
 }
 
 .wrapper {
@@ -167,7 +166,7 @@ body {
 .logo {
   min-width: 5rem;
   height: 5rem;
-  background: url("../../img/logo.png") center no-repeat;
+  background: url("../img/logo.png") center no-repeat;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
@@ -180,7 +179,7 @@ a {
 
 #section-1 {
   height: 100vh;
-  background: url("../../img/building.jpg") top no-repeat;
+  background: url("../img/building.jpg") top no-repeat;
 }
 
 header {
@@ -263,103 +262,19 @@ header #search input {
             justify-content: space-between;
     min-height: 5rem;
   }
-  header #burgger-toggler {
-    -ms-flex-item-align: center;
-        align-self: center;
-    width: 2rem;
-    height: 2rem;
-    border: 1px solid red;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-  header #burgger-toggler .line {
-    width: 2rem;
-    height: .3rem;
-    background-color: #fff;
-    border-radius: 20%;
-    -webkit-transition: -webkit-transform .3s ease;
-    transition: -webkit-transform .3s ease;
-    transition: transform .3s ease;
-    transition: transform .3s ease, -webkit-transform .3s ease;
-  }
-  header #burgger-toggler #line1 {
-    background: #eba50e;
-  }
-  header #burgger-toggler #line2 {
-    -webkit-transform: translateY(0.45rem);
-            transform: translateY(0.45rem);
-  }
-  header #burgger-toggler #line3 {
-    background: green;
-    -webkit-transform: translateY(1rem);
-            transform: translateY(1rem);
-  }
-  header #burgger-toggler.active #line2 {
-    opacity: 0;
-  }
-  header #burgger-toggler.active #line3 {
-    -webkit-transform: translateY(0.27rem);
-            transform: translateY(0.27rem);
-  }
-  @-webkit-keyframes rotationRight {
-    0% {
-      -webkit-transform: rotate(0deg);
-              transform: rotate(0deg);
-    }
-    100% {
-      -webkit-transform: rotate(45deg);
-              transform: rotate(45deg);
-    }
-  }
-  @keyframes rotationRight {
-    0% {
-      -webkit-transform: rotate(0deg);
-              transform: rotate(0deg);
-    }
-    100% {
-      -webkit-transform: rotate(45deg);
-              transform: rotate(45deg);
-    }
-  }
-  @-webkit-keyframes rotationLeft {
-    0% {
-      -webkit-transform: rotate(0deg);
-              transform: rotate(0deg);
-    }
-    100% {
-      -webkit-transform: rotate(-45deg);
-              transform: rotate(-45deg);
-    }
-  }
-  @keyframes rotationLeft {
-    0% {
-      -webkit-transform: rotate(0deg);
-              transform: rotate(0deg);
-    }
-    100% {
-      -webkit-transform: rotate(-45deg);
-              transform: rotate(-45deg);
-    }
-  }
   header nav {
     -webkit-transform: skewX(0);
             transform: skewX(0);
     position: fixed;
-    left: 0;
     top: 7rem;
     background-color: #aaaac0;
-    width: 70%;
-    -webkit-transform: scaleX(0);
-            transform: scaleX(0);
-    -webkit-transition: -webkit-transform .2s ease;
-    transition: -webkit-transform .2s ease;
-    transition: transform .2s ease;
-    transition: transform .2s ease, -webkit-transform .2s ease;
+    height: 100vh;
+    -webkit-transform: translateX(-100vw);
+            transform: translateX(-100vw);
+    -webkit-transition: -webkit-transform .7s ease;
+    transition: -webkit-transform .7s ease;
+    transition: transform .7s ease;
+    transition: transform .7s ease, -webkit-transform .7s ease;
   }
   header nav ul {
     -webkit-box-orient: vertical;
@@ -371,8 +286,8 @@ header #search input {
     padding: 1.5rem 5rem;
   }
   header nav.active {
-    -webkit-transform: scaleX(1);
-            transform: scaleX(1);
+    -webkit-transform: translateX(-0.5rem);
+            transform: translateX(-0.5rem);
   }
   header #search {
     position: relative;
@@ -388,6 +303,44 @@ header #search input {
     -ms-flex-item-align: center;
         -ms-grid-row-align: center;
         align-self: center;
+  }
+  header #burgger-toggler {
+    list-style: none;
+    cursor: pointer;
+    width: 3rem;
+    height: 2rem;
+    margin: 50px auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  header #burgger-toggler div {
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    width: 2rem;
+    height: 2px;
+    background: #fff;
+    margin-bottom: 8px;
+    margin: auto;
+  }
+  header #burgger-toggler.active {
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+  }
+  header #burgger-toggler.active .bar1 {
+    -webkit-transform: rotate(45deg) translate(8px, 7px);
+            transform: rotate(45deg) translate(8px, 7px);
+  }
+  header #burgger-toggler.active .bar2 {
+    opacity: 0;
+  }
+  header #burgger-toggler.active .bar3 {
+    -webkit-transform: rotate(-45deg) translate(7px, -6px);
+            transform: rotate(-45deg) translate(7px, -6px);
   }
 }
 
@@ -447,7 +400,7 @@ header #search input {
   font-style: italic;
   width: 100vw;
   height: 100vh;
-  background: url("../../img/sunHouse.jpg") center no-repeat;
+  background: url("../img/sunHouse.jpg") center no-repeat;
 }
 
 #section-3 .wrapper {
@@ -601,7 +554,7 @@ header #search input {
 }
 
 #section-4 .courosel-container .courosel-item:nth-of-type(1) {
-  background: url("../../img/innerHouse.jpg") center no-repeat;
+  background: url("../img/innerHouse.jpg") center no-repeat;
   background-size: cover;
 }
 
@@ -612,7 +565,7 @@ header #search input {
 
 #section-4 .courosel-container .courosel-item:nth-of-type(2) {
   background: green;
-  background: url("../../img/innerHouse.jpg") center no-repeat;
+  background: url("../img/innerHouse.jpg") center no-repeat;
   background-size: cover;
 }
 
