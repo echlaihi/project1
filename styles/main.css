@@ -142,7 +142,7 @@ table {
   border-spacing: 0;
 }
 
-header #search label, #section-5 .wrapper {
+header > .wrapper #search label, #section-5 .wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -182,7 +182,7 @@ a {
   background: url("../img/building.jpg") top no-repeat;
 }
 
-header {
+header > .wrapper {
   height: 7.25rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -190,7 +190,7 @@ header {
   font-family: sans-serif;
 }
 
-header nav {
+header > .wrapper nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -198,14 +198,14 @@ header nav {
           transform: skewX(-9.2deg);
 }
 
-header ul {
+header > .wrapper ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   width: 100%;
 }
 
-header ul a {
+header > .wrapper ul a {
   display: block;
   padding-top: 2.625rem;
   padding-bottom: 1rem;
@@ -218,57 +218,55 @@ header ul a {
   transition: background-color .2s ease;
 }
 
-header ul a.active {
+header > .wrapper ul a.active {
   background-color: #00ff9c;
   color: #31271c;
 }
 
-header ul a:hover {
+header > .wrapper ul a:hover {
   background-color: #00ff9c;
 }
 
-header #search {
-  -ms-flex-negative: 2;
-      flex-shrink: 2;
+header > .wrapper #search {
   width: 20%;
   margin-left: 1rem;
 }
 
-header #search form {
+header > .wrapper #search form {
   width: 100%;
   height: 100%;
 }
 
-header #search label {
+header > .wrapper #search label {
   width: 5rem;
   height: 5rem;
   height: 2rem;
   display: none;
 }
 
-header #search label i {
+header > .wrapper #search label i {
   font-size: 2rem;
 }
 
-header #search input {
+header > .wrapper #search input {
   padding: .5rem !important;
   margin-top: 2rem;
 }
 
 @media screen and (max-width: 1082px) {
-  header {
+  header > .wrapper {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    min-height: 5rem;
+    height: 5rem;
+    border: 1px solid red;
   }
-  header nav {
+  header > .wrapper nav {
     -webkit-transform: skewX(0);
             transform: skewX(0);
     position: fixed;
-    top: 7rem;
+    top: 5rem;
     background-color: #aaaac0;
-    height: 100vh;
     -webkit-transform: translateX(-100vw);
             transform: translateX(-100vw);
     -webkit-transition: -webkit-transform .7s ease;
@@ -276,40 +274,50 @@ header #search input {
     transition: transform .7s ease;
     transition: transform .7s ease, -webkit-transform .7s ease;
   }
-  header nav ul {
+  header > .wrapper nav ul {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  header nav a {
+  header > .wrapper nav a {
     padding: 1.5rem 5rem;
   }
-  header nav.active {
+  header > .wrapper nav.active {
     -webkit-transform: translateX(-0.5rem);
             transform: translateX(-0.5rem);
   }
-  header #search {
-    position: relative;
-    right: 0;
-    margin-left: 0;
-    width: 10rem;
-    margin-top: .4rem;
+  header > .wrapper #search {
+    border: 1px solid red;
+    width: 25%;
+    height: 5rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
-  header #search input {
+  header > .wrapper #search input {
     width: 100%;
-  }
-  header .logo {
     -ms-flex-item-align: center;
         -ms-grid-row-align: center;
         align-self: center;
   }
-  header #burgger-toggler {
+  header > .wrapper .logo {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    background-size: 3rem;
+    width: 50%;
+  }
+  header > .wrapper #burgger-toggler {
     list-style: none;
     cursor: pointer;
-    width: 3rem;
+    width: 25%;
     height: 2rem;
-    margin: 50px auto;
+    margin-top: auto;
+    margin-bottom: auto;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -317,28 +325,30 @@ header #search input {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
-  header #burgger-toggler div {
+  header > .wrapper #burgger-toggler div {
     -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
     width: 2rem;
     height: 2px;
     background: #fff;
     margin-bottom: 8px;
-    margin: auto;
   }
-  header #burgger-toggler.active {
+  header > .wrapper #burgger-toggler.active {
     -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
   }
-  header #burgger-toggler.active .bar1 {
+  header > .wrapper #burgger-toggler.active .bar1 {
     -webkit-transform: rotate(45deg) translate(8px, 7px);
             transform: rotate(45deg) translate(8px, 7px);
   }
-  header #burgger-toggler.active .bar2 {
+  header > .wrapper #burgger-toggler.active .bar2 {
     opacity: 0;
   }
-  header #burgger-toggler.active .bar3 {
+  header > .wrapper #burgger-toggler.active .bar3 {
     -webkit-transform: rotate(-45deg) translate(7px, -6px);
             transform: rotate(-45deg) translate(7px, -6px);
   }
