@@ -22,39 +22,42 @@
     }
     // carousel container
     .carousel-container {
-        width: 78vw;
-        border: 1px solid red;
+        // border: 10px solid green !important;
         height: (474rem/16);
-        // overflow-x: scroll;
+        overflow: hidden;
+        width: 78vw;
         .carousel-wrapper {
-            border: 1px solid green;
             height: 100%;
             display: flex;
-            width: (78vw*4);
             transition: transform 1s ease;
-            // overflow: hidden;
         }
         .carousel-item {
-            width: 78vw;
+            min-width: 78vw;
+            // border: 2px solid red;
             height: 100%;
-            border: 1px solid red;
             background-size: cover;
             transition: transform 1s ease;
-            &:nth-of-type(odd) {
-                background-color: red;
+            background-repeat: no-repeat;
+            &:nth-child(1) {
+                background-image: url('../img/innerhouse.jpg');
             }
-            &:nth-of-type(even) {
-                background-color: green;
+            &:nth-child(2) {
+                background-image: url('../img/innerhouse2.jpg');
             }
-            &:nth-of-type(1) {
-                background: url('../img/innerHouse.jpg') no-repeat;
+            &:nth-child(3) {
+                background-image: url('../img/innerhouse3.jpg');
             }
-            &:nth-of-type(2) {
-                background: green;
+            &:nth-child(4) {
+                background-image: url('../img/innerhouse4.jpg');
             }
-            &:nth-of-type(3) {
-                // background: green;
-                background: url('../img/innerHouse.jpg') no-repeat;
+            &:nth-child(5) {
+                background-image: url('../img/innerhouse5.jpg');
+            }
+        }
+        @include fix-carousel {
+            min-width: 92vw;
+            .carousel-item {
+                min-width: 92vw;
             }
         }
     }
