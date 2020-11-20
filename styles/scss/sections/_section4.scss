@@ -20,33 +20,41 @@
             color: $secondary_dark;
         }
     }
-    // courosel container
-    .courosel-container {
-        position: relative;
-        width: 100%;
+    // carousel container
+    .carousel-container {
+        width: 78vw;
+        border: 1px solid red;
         height: (474rem/16);
-        overflow-x: scroll;
-        .courosel-wrapper {
-            position: relative;
-            width: 400%;
+        // overflow-x: scroll;
+        .carousel-wrapper {
+            border: 1px solid green;
             height: 100%;
             display: flex;
+            width: (78vw*4);
+            transition: transform 1s ease;
+            // overflow: hidden;
         }
-        .courosel-item {
-            width: 100%;
+        .carousel-item {
+            width: 78vw;
             height: 100%;
+            border: 1px solid red;
+            background-size: cover;
+            transition: transform 1s ease;
+            &:nth-of-type(odd) {
+                background-color: red;
+            }
+            &:nth-of-type(even) {
+                background-color: green;
+            }
             &:nth-of-type(1) {
-                background: url('../img/innerHouse.jpg') center no-repeat;
-                background-size: cover;
+                background: url('../img/innerHouse.jpg') no-repeat;
             }
             &:nth-of-type(2) {
                 background: green;
-                background-size: cover;
             }
-            &:nth-of-type(2) {
-                background: green;
-                background: url('../img/innerHouse.jpg') center no-repeat;
-                background-size: cover;
+            &:nth-of-type(3) {
+                // background: green;
+                background: url('../img/innerHouse.jpg') no-repeat;
             }
         }
     }
