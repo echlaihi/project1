@@ -7,25 +7,31 @@ $(document).ready(function() {
     });
 
     // handle the search section
-    let searchLabel = $('#search > label');
-    searchLabel.remove()
-    console.log('search label has removed');
+
+    // remove the search input 
+    let searchLabel = $('#search  label');
+    $(searchLabel).click(function() {
+        $(searchLabel).remove();
+        $('#search input').css({
+            transform: 'scaleX(1)',
+            transition: 'transform 1s ease',
+        });
+
+    });
     // create a fixed header on scroll
     // grab the hole nav
     const header = $('header');
-    console.log(header);
+    // console.log(header);
     $(window).scroll(function() {
-        if ($(window).scrollTop() > 20) {
-            $(header).animate({
 
-                backgroundColor: 'red',
-                position: 'fixed',
+        var scrollHeight = $(window).scrollTop();
+        console.log(scrollHeight);
 
-            });
+        if (scrollHeight > 200) {
+            $(header).addClass('active');
+
         } else {
-            $(header).animate({
-
-            });
+            $(header).removeClass('active');
         }
     });
 

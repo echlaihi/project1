@@ -2,7 +2,10 @@
     background-image: url("/img/building.jpg");
     height: 100vh;
     header {
-        position: fixed;
+        &.active {
+            position: fixed;
+            background-color: $dark_blue_footer;
+        }
         z-index: 1000;
         color: $primary_waite;
         width: 100%;

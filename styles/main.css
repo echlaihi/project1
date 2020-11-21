@@ -53,10 +53,14 @@ a {
 }
 
 #section-1 header {
-  position: fixed;
   z-index: 1000;
   color: #fff;
   width: 100%;
+}
+
+#section-1 header.active {
+  position: fixed;
+  background-color: #1c1c36;
 }
 
 #section-1 header .wrapper {
