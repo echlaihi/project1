@@ -25,7 +25,7 @@ $(document).ready(function() {
     $(window).scroll(function() {
 
         var scrollHeight = $(window).scrollTop();
-        console.log(scrollHeight);
+        // console.log(scrollHeight);
 
         if (scrollHeight > 200) {
             $(header).addClass('active');
@@ -46,8 +46,17 @@ $(document).ready(function() {
 
     // set courosel-item width
     // grab courosel-container width
-    var couroselWidth = $('.courosel-container').width();
-    $('.courosel-item').css({ width: `${couroselWidth}px` });
+
+    $(window).on('resize', function() {
+
+
+        $(carousel).css({
+            transform: "translateX(0)",
+        });
+
+        console.log($(window).width());
+
+    });
     // get all the carousel items
     var numItems = Array.from($('.carousel-item')).length;
 
@@ -55,6 +64,8 @@ $(document).ready(function() {
 
     // create a slide to left 
     $(btnLeft).click(function() {
+        var couroselWidth = $('.courosel-container').width();
+
         if (counter < 1) {
             return;
         } else {
@@ -70,6 +81,7 @@ $(document).ready(function() {
 
     // create a slide to right 
     $(btnRight).click(function() {
+        var couroselWidth = $('.courosel-container').width();
 
         if (counter > numItems - 2) {
             return
