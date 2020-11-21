@@ -290,7 +290,7 @@ header .wrapper #search input {
   font-weight: bold;
   font-style: italic;
   height: 100vh;
-  background: url("../img/sunHouse.jpg") center no-repeat;
+  background-image: url("../img/sunHouse.jpg") center no-repeat;
 }
 
 #section-3 .wrapper {
