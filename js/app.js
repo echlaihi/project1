@@ -52,9 +52,10 @@ $(document).ready(function() {
 
         $(carousel).css({
             transform: "translateX(0)",
+
         });
 
-        console.log($(window).width());
+        counter = 0;
 
     });
     // get all the carousel items
