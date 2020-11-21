@@ -1,0 +1,92 @@
+#section-1 {
+    header {
+        .wrapper {
+            @include tablet {
+                height: 4.5rem;
+                // logo
+                .logo {
+                    background-size: 3.5rem;
+                    width: 30%;
+                    margin: 0;
+                }
+                // search
+                #search {
+                    width: 35%;
+                    margin: 0;
+                    input {
+                        margin-top: 1.3rem;
+                        margin-left: auto;
+                        margin-right: 1rem;
+                    }
+                    label {
+                        i {
+                            margin-top: 1.2rem;
+                            display: block;
+                            margin-left: 60%;
+                        }
+                    }
+                }
+                // burgger toggler
+                #burgger-toggler {
+                    padding-left: 1rem;
+                    width: 35%;
+                    flex-shrink: 0;
+                    list-style: none;
+                    cursor: pointer;
+                    height: 2rem;
+                    margin-top: auto;
+                    margin-bottom: auto;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    div {
+                        transition: all 0.3s ease-in-out;
+                        width: 2rem;
+                        height: 2px;
+                        background: $primary_waite;
+                        margin-bottom: 8px;
+                    }
+                    &.active {
+                        transition: all 0.3s ease-in-out;
+                        .bar1 {
+                            transform: rotate(45deg) translate(8px, 7px);
+                        }
+                        .bar2 {
+                            opacity: 0;
+                        }
+                        .bar3 {
+                            transform: rotate(-45deg) translate(7px, -6px);
+                        }
+                    }
+                }
+                nav {
+                    position: absolute;
+                    top: 4.5rem;
+                    // left: 
+                    background: $light_gray;
+                    transform: skewX(0deg) translateX(-1000px);
+                    transition: transform 1s ease;
+                    &.active {
+                        transform: translateX(0px);
+                    }
+                    ul {
+                        flex-direction: column;
+                        li {
+                            height: 4rem;
+                            width: 100%;
+                            // min-width: 306px;
+                            a {
+                                padding-left: 1rem;
+                                text-align: left;
+                                height: 4rem;
+                                line-height: 4rem;
+                                width: 100%;
+                                min-width: 306px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

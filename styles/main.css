@@ -8,7 +8,7 @@
   text-decoration: none;
 }
 
-header > .wrapper #search label, #section-5 .wrapper {
+#section-5 .wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -19,15 +19,18 @@ header > .wrapper #search label, #section-5 .wrapper {
 
 html,
 body {
+  width: 100vw;
+}
+
+section {
+  border: 1px solid green;
   width: 100%;
-  overflow-x: hidden;
 }
 
 .wrapper {
-  width: 96vw;
+  width: 100%;
   max-width: 68.75rem;
   margin: 0 auto;
-  padding: 0 1.5vw;
 }
 
 .logo {
@@ -45,143 +48,116 @@ a {
 }
 
 #section-1 {
+  background-image: url("/img/building.jpg");
   height: 100vh;
-  background: url("../img/building.jpg") top no-repeat;
 }
 
-header > .wrapper {
-  height: 7.25rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  font-family: sans-serif;
-}
-
-header > .wrapper nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-transform: skewX(-9.2deg);
-          transform: skewX(-9.2deg);
-}
-
-header > .wrapper ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+#section-1 header {
+  position: fixed;
+  z-index: 1000;
+  color: #fff;
   width: 100%;
 }
 
-header > .wrapper ul a {
-  display: block;
-  padding-top: 2.625rem;
-  padding-bottom: 1rem;
-  padding: 2.625rem 1.4375rem 1rem 1.4375rem;
-  color: #fff;
-  font-style: italic;
-  text-transform: uppercase;
-  letter-spacing: .05rem;
-  -webkit-transition: background-color .2s ease;
-  transition: background-color .2s ease;
+#section-1 header .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 6rem;
 }
 
-header > .wrapper ul a.active {
+#section-1 header .wrapper .logo {
+  width: 15%;
+}
+
+#section-1 header .wrapper nav {
+  width: 70%;
+  -webkit-transform: skewX(20deg);
+          transform: skewX(20deg);
+}
+
+#section-1 header .wrapper nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#section-1 header .wrapper nav ul li {
+  height: 6rem;
+}
+
+#section-1 header .wrapper nav ul a {
+  display: block;
+  width: 7rem;
+  height: 4.5rem;
+  text-align: center;
+  line-height: 6rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  letter-spacing: .1rem;
+}
+
+#section-1 header .wrapper nav ul a:hover {
+  background-color: #00ff9c;
+}
+
+#section-1 header .wrapper nav ul a.active {
   background-color: #00ff9c;
   color: #31271c;
 }
 
-header > .wrapper ul a:hover {
-  background-color: #00ff9c;
-}
-
-header > .wrapper #search {
-  width: 20%;
-  margin-left: 1rem;
-}
-
-header > .wrapper #search form {
-  width: 100%;
+#section-1 header .wrapper #search {
+  width: 15%;
   height: 100%;
 }
 
-header > .wrapper #search label {
-  width: 5rem;
-  height: 5rem;
-  height: 2rem;
-  display: none;
-}
-
-header > .wrapper #search label i {
-  font-size: 2rem;
-}
-
-header > .wrapper #search input {
-  padding: .5rem !important;
+#section-1 header .wrapper #search label {
+  font-size: 1.3rem;
+  display: block;
+  height: 100%;
   margin-top: 2rem;
 }
 
+#section-1 header .wrapper #search input {
+  display: block;
+  width: 100%;
+  max-width: 8rem;
+  height: 2rem;
+  margin-top: 2rem;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+}
+
 @media screen and (max-width: 1082px) {
-  header > .wrapper {
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    height: 5rem;
-    border: 1px solid red;
+  #section-1 header .wrapper {
+    height: 4.5rem;
   }
-  header > .wrapper nav {
-    -webkit-transform: skewX(0);
-            transform: skewX(0);
-    position: fixed;
-    top: 5rem;
-    background-color: #aaaac0;
-    -webkit-transform: translateX(-100vw);
-            transform: translateX(-100vw);
-    -webkit-transition: -webkit-transform .7s ease;
-    transition: -webkit-transform .7s ease;
-    transition: transform .7s ease;
-    transition: transform .7s ease, -webkit-transform .7s ease;
+  #section-1 header .wrapper .logo {
+    background-size: 3.5rem;
+    width: 30%;
+    margin: 0;
   }
-  header > .wrapper nav ul {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+  #section-1 header .wrapper #search {
+    width: 35%;
+    margin: 0;
   }
-  header > .wrapper nav a {
-    padding: 1.5rem 5rem;
+  #section-1 header .wrapper #search input {
+    margin-top: 1.3rem;
+    margin-left: auto;
+    margin-right: 1rem;
   }
-  header > .wrapper nav.active {
-    -webkit-transform: translateX(-0.5rem);
-            transform: translateX(-0.5rem);
+  #section-1 header .wrapper #search label i {
+    margin-top: 1.2rem;
+    display: block;
+    margin-left: 60%;
   }
-  header > .wrapper #search {
-    border: 1px solid red;
-    width: 25%;
-    height: 5rem;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-  header > .wrapper #search input {
-    width: 100%;
-    -ms-flex-item-align: center;
-        -ms-grid-row-align: center;
-        align-self: center;
-  }
-  header > .wrapper .logo {
-    -ms-flex-item-align: center;
-        -ms-grid-row-align: center;
-        align-self: center;
-    background-size: 3rem;
-    width: 50%;
-  }
-  header > .wrapper #burgger-toggler {
+  #section-1 header .wrapper #burgger-toggler {
+    padding-left: 1rem;
+    width: 35%;
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
     list-style: none;
     cursor: pointer;
-    width: 25%;
     height: 2rem;
     margin-top: auto;
     margin-bottom: auto;
@@ -196,7 +172,7 @@ header > .wrapper #search input {
         -ms-flex-pack: justify;
             justify-content: space-between;
   }
-  header > .wrapper #burgger-toggler div {
+  #section-1 header .wrapper #burgger-toggler div {
     -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
     width: 2rem;
@@ -204,20 +180,53 @@ header > .wrapper #search input {
     background: #fff;
     margin-bottom: 8px;
   }
-  header > .wrapper #burgger-toggler.active {
+  #section-1 header .wrapper #burgger-toggler.active {
     -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
   }
-  header > .wrapper #burgger-toggler.active .bar1 {
+  #section-1 header .wrapper #burgger-toggler.active .bar1 {
     -webkit-transform: rotate(45deg) translate(8px, 7px);
             transform: rotate(45deg) translate(8px, 7px);
   }
-  header > .wrapper #burgger-toggler.active .bar2 {
+  #section-1 header .wrapper #burgger-toggler.active .bar2 {
     opacity: 0;
   }
-  header > .wrapper #burgger-toggler.active .bar3 {
+  #section-1 header .wrapper #burgger-toggler.active .bar3 {
     -webkit-transform: rotate(-45deg) translate(7px, -6px);
             transform: rotate(-45deg) translate(7px, -6px);
+  }
+  #section-1 header .wrapper nav {
+    position: absolute;
+    top: 4.5rem;
+    background: #aaaac0;
+    -webkit-transform: skewX(0deg) translateX(-1000px);
+            transform: skewX(0deg) translateX(-1000px);
+    -webkit-transition: -webkit-transform 1s ease;
+    transition: -webkit-transform 1s ease;
+    transition: transform 1s ease;
+    transition: transform 1s ease, -webkit-transform 1s ease;
+  }
+  #section-1 header .wrapper nav.active {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+  #section-1 header .wrapper nav ul {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #section-1 header .wrapper nav ul li {
+    height: 4rem;
+    width: 100%;
+  }
+  #section-1 header .wrapper nav ul li a {
+    padding-left: 1rem;
+    text-align: left;
+    height: 4rem;
+    line-height: 4rem;
+    width: 100%;
+    min-width: 306px;
   }
 }
 

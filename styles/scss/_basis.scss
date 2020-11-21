@@ -1,15 +1,19 @@
 html,
 body {
+    width: 100vw;
+    // overflow-x/: hidden;
+}
+
+section {
+    border: 1px solid green;
     width: 100%;
-    overflow-x: hidden;
 }
 
 .wrapper {
-    width: 96vw;
+    width: 100%;
     max-width: (1100rem/16);
     margin: 0 auto;
-    padding: 0 1.5vw;
-    // @extend %border;
+    // padding: 0 1.5vw;
 }
 
 .logo {
