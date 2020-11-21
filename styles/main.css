@@ -23,7 +23,6 @@ body {
 }
 
 section {
-  border: 1px solid green;
   width: 100%;
 }
 
@@ -473,6 +472,8 @@ a {
 @media screen and (max-width: 1000px) {
   #section-4 .carousel-container {
     min-width: 92vw;
+    -webkit-transform: translateX(15px);
+            transform: translateX(15px);
   }
   #section-4 .carousel-container .carousel-item {
     min-width: 92vw;

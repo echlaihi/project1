@@ -56,6 +56,7 @@
         }
         @include fix-carousel {
             min-width: 92vw;
+            transform: translateX(15px);
             .carousel-item {
                 min-width: 92vw;
             }
