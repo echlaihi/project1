@@ -14,7 +14,7 @@ $(document).ready(function() {
         $(searchLabel).remove();
         $('#search input').css({
             transform: 'scaleX(1)',
-            transition: 'transform 1s ease',
+            transition: 'transform .5s ease',
         });
 
     });
