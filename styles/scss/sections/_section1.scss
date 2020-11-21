@@ -1,65 +1,71 @@
 #section-1 {
     background-image: url("/img/building.jpg");
     height: 100vh;
-    header {
-        &.active {
-            position: fixed;
-            background-color: $dark_blue_footer;
+    h1 {
+        display: none;
+    }
+}
+
+header {
+    position: absolute;
+    top: 0;
+    &.active {
+        position: fixed;
+        background-color: $dark_blue_footer;
+    }
+    z-index: 1000;
+    color: $primary_waite;
+    width: 100%;
+    .wrapper {
+        display: flex;
+        height: 6rem;
+        .logo {
+            width: 15%;
         }
-        z-index: 1000;
-        color: $primary_waite;
-        width: 100%;
-        .wrapper {
-            display: flex;
-            height: 6rem;
-            .logo {
-                width: 15%;
-            }
-            nav {
-                width: 70%;
-                transform: skewX(20deg);
-                ul {
-                    display: flex;
-                    li {
-                        height: 6rem;
+        nav {
+            width: 70%;
+            transform: skewX(20deg);
+            ul {
+                display: flex;
+                li {
+                    height: 6rem;
+                }
+                a {
+                    display: block;
+                    width: 7rem;
+                    height: 4.5rem;
+                    text-align: center;
+                    line-height: 6rem;
+                    font-size: 1.2rem;
+                    font-weight: bold;
+                    letter-spacing: .1rem;
+                    &:hover {
+                        background-color: $light_green;
                     }
-                    a {
-                        display: block;
-                        width: 7rem;
-                        height: 4.5rem;
-                        text-align: center;
-                        line-height: 6rem;
-                        font-size: 1.2rem;
-                        font-weight: bold;
-                        letter-spacing: .1rem;
-                        &:hover {
-                            background-color: $light_green;
-                        }
-                        &.active {
-                            background-color: $light_green;
-                            color: $dark;
-                        }
+                    &.active {
+                        background-color: $light_green;
+                        color: $dark;
                     }
                 }
             }
-            #search {
-                width: 15%;
+        }
+        #search {
+            width: 15%;
+            height: 100%;
+            label {
+                // color:
+                font-size: 1.3rem;
+                display: block;
                 height: 100%;
-                label {
-                    // color:
-                    font-size: 1.3rem;
-                    display: block;
-                    height: 100%;
-                    margin-top: 2rem;
-                }
-                input {
-                    display: block;
-                    width: 100%;
-                    max-width: 8rem;
-                    height: 2rem;
-                    margin-top: 2rem;
-                    transform: scale(0);
-                }
+                margin-top: 2rem;
+            }
+            input {
+                display: block;
+                width: 100%;
+                max-width: 8rem;
+                height: 2rem;
+                margin-top: 2rem;
+                transform: scale(0);
             }
         }
     }

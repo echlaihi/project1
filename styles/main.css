@@ -19,17 +19,14 @@
 
 html,
 body {
-  width: 100vw;
-}
-
-section {
   width: 100%;
 }
 
 .wrapper {
-  width: 100%;
+  width: 98%;
   max-width: 68.75rem;
   margin: 0 auto;
+  padding: 0 1%;
 }
 
 .logo {
@@ -51,45 +48,51 @@ a {
   height: 100vh;
 }
 
-#section-1 header {
+#section-1 h1 {
+  display: none;
+}
+
+header {
+  position: absolute;
+  top: 0;
   z-index: 1000;
   color: #fff;
   width: 100%;
 }
 
-#section-1 header.active {
+header.active {
   position: fixed;
   background-color: #1c1c36;
 }
 
-#section-1 header .wrapper {
+header .wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   height: 6rem;
 }
 
-#section-1 header .wrapper .logo {
+header .wrapper .logo {
   width: 15%;
 }
 
-#section-1 header .wrapper nav {
+header .wrapper nav {
   width: 70%;
   -webkit-transform: skewX(20deg);
           transform: skewX(20deg);
 }
 
-#section-1 header .wrapper nav ul {
+header .wrapper nav ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-#section-1 header .wrapper nav ul li {
+header .wrapper nav ul li {
   height: 6rem;
 }
 
-#section-1 header .wrapper nav ul a {
+header .wrapper nav ul a {
   display: block;
   width: 7rem;
   height: 4.5rem;
@@ -100,28 +103,28 @@ a {
   letter-spacing: .1rem;
 }
 
-#section-1 header .wrapper nav ul a:hover {
+header .wrapper nav ul a:hover {
   background-color: #00ff9c;
 }
 
-#section-1 header .wrapper nav ul a.active {
+header .wrapper nav ul a.active {
   background-color: #00ff9c;
   color: #31271c;
 }
 
-#section-1 header .wrapper #search {
+header .wrapper #search {
   width: 15%;
   height: 100%;
 }
 
-#section-1 header .wrapper #search label {
+header .wrapper #search label {
   font-size: 1.3rem;
   display: block;
   height: 100%;
   margin-top: 2rem;
 }
 
-#section-1 header .wrapper #search input {
+header .wrapper #search input {
   display: block;
   width: 100%;
   max-width: 8rem;
@@ -132,29 +135,29 @@ a {
 }
 
 @media screen and (max-width: 1082px) {
-  #section-1 header .wrapper {
-    height: 4.5rem;
+  header .wrapper {
+    height: 5rem;
   }
-  #section-1 header .wrapper .logo {
+  header .wrapper .logo {
     background-size: 3.5rem;
     width: 30%;
     margin: 0;
   }
-  #section-1 header .wrapper #search {
+  header .wrapper #search {
     width: 35%;
     margin: 0;
   }
-  #section-1 header .wrapper #search input {
+  header .wrapper #search input {
     margin-top: 1.3rem;
     margin-left: auto;
     margin-right: 1rem;
   }
-  #section-1 header .wrapper #search label i {
+  header .wrapper #search label i {
     margin-top: 1.2rem;
     display: block;
     margin-left: 60%;
   }
-  #section-1 header .wrapper #burgger-toggler {
+  header .wrapper #burgger-toggler {
     padding-left: 1rem;
     width: 35%;
     -ms-flex-negative: 0;
@@ -175,7 +178,7 @@ a {
         -ms-flex-pack: justify;
             justify-content: space-between;
   }
-  #section-1 header .wrapper #burgger-toggler div {
+  header .wrapper #burgger-toggler div {
     -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
     width: 2rem;
@@ -183,22 +186,22 @@ a {
     background: #fff;
     margin-bottom: 8px;
   }
-  #section-1 header .wrapper #burgger-toggler.active {
+  header .wrapper #burgger-toggler.active {
     -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
   }
-  #section-1 header .wrapper #burgger-toggler.active .bar1 {
+  header .wrapper #burgger-toggler.active .bar1 {
     -webkit-transform: rotate(45deg) translate(8px, 7px);
             transform: rotate(45deg) translate(8px, 7px);
   }
-  #section-1 header .wrapper #burgger-toggler.active .bar2 {
+  header .wrapper #burgger-toggler.active .bar2 {
     opacity: 0;
   }
-  #section-1 header .wrapper #burgger-toggler.active .bar3 {
+  header .wrapper #burgger-toggler.active .bar3 {
     -webkit-transform: rotate(-45deg) translate(7px, -6px);
             transform: rotate(-45deg) translate(7px, -6px);
   }
-  #section-1 header .wrapper nav {
+  header .wrapper nav {
     position: absolute;
     top: 4.5rem;
     background: #aaaac0;
@@ -209,21 +212,21 @@ a {
     transition: transform 1s ease;
     transition: transform 1s ease, -webkit-transform 1s ease;
   }
-  #section-1 header .wrapper nav.active {
+  header .wrapper nav.active {
     -webkit-transform: translateX(0px);
             transform: translateX(0px);
   }
-  #section-1 header .wrapper nav ul {
+  header .wrapper nav ul {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  #section-1 header .wrapper nav ul li {
+  header .wrapper nav ul li {
     height: 4rem;
     width: 100%;
   }
-  #section-1 header .wrapper nav ul li a {
+  header .wrapper nav ul li a {
     padding-left: 1rem;
     text-align: left;
     height: 4rem;
@@ -234,7 +237,6 @@ a {
 }
 
 #section-2 {
-  width: 100%;
   min-height: 100vh;
   background-color: #f0f0f4;
   font-family: 'AcuminPro', sans-serif;
@@ -287,7 +289,6 @@ a {
   font-family: 'ACaslonPro';
   font-weight: bold;
   font-style: italic;
-  width: 100vw;
   height: 100vh;
   background: url("../img/sunHouse.jpg") center no-repeat;
 }
@@ -421,102 +422,6 @@ a {
   color: #373757;
 }
 
-#section-4 .carousel-container {
-  height: 29.625rem;
-  overflow: hidden;
-  width: 78vw;
-}
-
-#section-4 .carousel-container .carousel-wrapper {
-  height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-transition: -webkit-transform 1s ease;
-  transition: -webkit-transform 1s ease;
-  transition: transform 1s ease;
-  transition: transform 1s ease, -webkit-transform 1s ease;
-}
-
-#section-4 .carousel-container .carousel-item {
-  min-width: 78vw;
-  height: 100%;
-  background-size: cover;
-  -webkit-transition: -webkit-transform 1s ease;
-  transition: -webkit-transform 1s ease;
-  transition: transform 1s ease;
-  transition: transform 1s ease, -webkit-transform 1s ease;
-  background-repeat: no-repeat;
-}
-
-#section-4 .carousel-container .carousel-item:nth-child(1) {
-  background-image: url("../img/innerhouse.jpg");
-}
-
-#section-4 .carousel-container .carousel-item:nth-child(2) {
-  background-image: url("../img/innerhouse2.jpg");
-}
-
-#section-4 .carousel-container .carousel-item:nth-child(3) {
-  background-image: url("../img/innerhouse3.jpg");
-}
-
-#section-4 .carousel-container .carousel-item:nth-child(4) {
-  background-image: url("../img/innerhouse4.jpg");
-}
-
-#section-4 .carousel-container .carousel-item:nth-child(5) {
-  background-image: url("../img/innerhouse5.jpg");
-}
-
-@media screen and (max-width: 1000px) {
-  #section-4 .carousel-container {
-    min-width: 92vw;
-    -webkit-transform: translateX(15px);
-            transform: translateX(15px);
-  }
-  #section-4 .carousel-container .carousel-item {
-    min-width: 92vw;
-  }
-}
-
-#section-4 button {
-  position: absolute;
-  width: 3.375rem;
-  height: 6.25rem;
-  top: 57%;
-  -webkit-transform: translateX(-1.5rem);
-          transform: translateX(-1.5rem);
-  background-color: #00ff9c;
-  border: none;
-  z-index: 1;
-}
-
-#section-4 button:last-child {
-  right: -2rem;
-}
-
-#section-4 button:last-child div {
-  border-top: 0.2rem solid #fff;
-  border-right: 0.2rem solid #fff;
-}
-
-#section-4 button div {
-  width: 1rem;
-  height: 1rem;
-  margin: auto;
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-#section-4 #left div {
-  border-left: 0.2rem solid #fff;
-  border-bottom: 0.2rem solid #fff;
-}
-
 #section-4 .wrapper-2 {
   margin-top: 1.5rem;
   display: -webkit-box;
@@ -574,7 +479,6 @@ a {
   font-family: 'ACaslonPro';
   font-style: italic;
   font-weight: bolder;
-  font-size: 1.4rem;
   color: #20203c;
 }
 
@@ -606,6 +510,102 @@ a {
   #section-5 .wrapper a {
     margin: 1rem auto;
   }
+}
+
+.carousel-container {
+  position: relative;
+  height: 29.625rem;
+  margin: auto;
+  width: 78%;
+  overflow: hidden;
+}
+
+@media screen and (max-width: 1082px) {
+  .carousel-container {
+    width: 96%;
+  }
+}
+
+.carousel-container .carousel-wrapper {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-transition: -webkit-transform 1s ease;
+  transition: -webkit-transform 1s ease;
+  transition: transform 1s ease;
+  transition: transform 1s ease, -webkit-transform 1s ease;
+}
+
+.carousel-container .carousel-item {
+  min-width: 100%;
+  height: 100%;
+  background-size: cover;
+  -webkit-transition: -webkit-transform 1s ease;
+  transition: -webkit-transform 1s ease;
+  transition: transform 1s ease;
+  transition: transform 1s ease, -webkit-transform 1s ease;
+  background-repeat: no-repeat;
+}
+
+.carousel-container .carousel-item:nth-child(1) {
+  background-image: url("../img/innerhouse.jpg");
+}
+
+.carousel-container .carousel-item:nth-child(2) {
+  background-image: url("../img/innerhouse2.jpg");
+}
+
+.carousel-container .carousel-item:nth-child(3) {
+  background-image: url("../img/innerhouse3.jpg");
+}
+
+.carousel-container .carousel-item:nth-child(4) {
+  background-image: url("../img/innerhouse4.jpg");
+}
+
+.carousel-container .carousel-item:nth-child(5) {
+  background-image: url("../img/innerhouse5.jpg");
+}
+
+.button {
+  position: absolute;
+  width: 1.6875rem;
+  height: 6.25rem;
+  top: 40%;
+  -webkit-transform: translateX(1.6875 rem);
+          transform: translateX(1.6875 rem);
+  background-color: #00ff9c;
+  border: none;
+  z-index: 8;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.button div {
+  width: 1rem;
+  height: 1rem;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  margin: auto;
+}
+
+.button:last-child {
+  right: 0;
+}
+
+.button:last-child div {
+  border-top: 0.2rem solid #fff;
+  border-right: 0.2rem solid #fff;
+}
+
+#left div {
+  border-left: 0.2rem solid #fff;
+  border-bottom: 0.2rem solid #fff;
 }
 
 #section-6 {

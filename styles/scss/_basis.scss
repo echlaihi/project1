@@ -1,16 +1,13 @@
 html,
 body {
-    width: 100vw;
-}
-
-section {
     width: 100%;
 }
 
 .wrapper {
-    width: 100%;
+    width: 98%;
     max-width: (1100rem/16);
     margin: 0 auto;
+    padding: 0 1%;
 }
 
 .logo {

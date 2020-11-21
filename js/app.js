@@ -43,6 +43,11 @@ $(document).ready(function() {
     var btnRight = $('#right');
     var counter = 0;
 
+
+    // set courosel-item width
+    // grab courosel-container width
+    var couroselWidth = $('.courosel-container').width();
+    $('.courosel-item').css({ width: `${couroselWidth}px` });
     // get all the carousel items
     var numItems = Array.from($('.carousel-item')).length;
 
